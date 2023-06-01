@@ -1,12 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { isIOS } from "mobile-device-detect";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header id="header">
       <div id="sticky-header">
         <div>
-          <span style={{ float: 'left', margin: isIOS ? '10px 16px' : '14px 16px' }}>Apps Store</span>
+          <span
+            style={{ float: 'left', margin: isIOS ? '10px 16px' : '14px 16px', cursor: 'pointer' }}
+            onClick={() => navigate('/')}
+          >
+            <img src="/logo.png" alt="Cigar App Store" style={{ height: isIOS ? 22 : 30 }} />
+          </span>
           <button
             style={isIOS ? {
               float: 'right',
@@ -18,6 +25,7 @@ const Header = () => {
               fontWeight: 700,
               height: 28,
               margin: '10px 16px',
+              cursor: 'pointer',
             } : {
               float: 'right',
               backgroundColor: '#01875f',
@@ -29,6 +37,10 @@ const Header = () => {
               border: 'none',
               borderRadius: '8px',
               margin: '10px 16px',
+              cursor: 'pointer',
+            }}
+            onClick={() => {
+              navigate('/submit');
             }}
           >
             {'Submit App'}

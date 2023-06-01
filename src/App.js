@@ -1,21 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import { useEffect } from "react";
-import WOW from "wow.js";
+import Submit from "./pages/Submit";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 function App() {
-  useEffect(() => {
-    const wow = new WOW({
-      boxClass: "wow",
-      animateClass: "animated",
-      offset: 0,
-      mobile: false,
-      live: true,
-    });
-    wow.init();
-  }, []);
-
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -25,6 +14,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/submit" element={<Submit />} />
       </Routes>
     </>
   );

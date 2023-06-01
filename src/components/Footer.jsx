@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="footer-area">
         <div className="container">
           <div className="footer-bottom">
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', textAlign: isMobile ? 'center' : '' }}>
               <div style={!isMobile ? { flex: 1 } : {}}>
-                <p>Copyright &copy; {new Date().getFullYear()} Boxpressd Ltd. All Rights Reserved.</p>
+                <p>Made by the team at <a href="https://app.boxpressd.com">Boxpressd</a>.{isMobile && <br/>} All Rights Reserved.</p>
               </div>
               <div style={!isMobile ? { flex: 1 } : {}}>
                 <div className="footer-menu">
@@ -22,7 +22,7 @@ const Footer = () => {
                       <Link to="#" onClick={() => window.open('https://boxpressd.com/legal/privacy', '_blank')}>Privacy Policy</Link>
                     </li>
                     <li>
-                      <Link to="#" onClick={() => window.open('#', '_blank')}>Submit App</Link>
+                      <Link to="/submit">Submit App</Link>
                     </li>
                   </ul>
                 </div>

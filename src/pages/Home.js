@@ -1,12 +1,12 @@
 import React from'react';
-import { isMobileOnly } from'mobile-device-detect';
+import { isMobileOnly, isIOS } from'mobile-device-detect';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 const apps = [{
   name: 'Boxpressd',
   link: 'https://bxpr.sd/install',
-  icon: 'https://app.boxpressd.com/apple-touch-icon-512x512.png',
+  icon: 'https://app.boxpressd.com/apple-touch-icon-180x180.png',
   verified: true,
 }, {
   name: 'Cigar Dojo',
@@ -31,17 +31,29 @@ const apps = [{
 }]
 
 const Home = () => {
+  const height = isMobileOnly ? '50vw' : 180;
+  const width = isMobileOnly ? '50vw' : 180;
   return (
     <div style={!isMobileOnly ? { display: 'flex', flexDirection: 'column', height: '100vh' } : {}}>
       <Header />
       <h1 style={{ fontSize: '18px', margin: 20 }}>Top Cigar Apps</h1>
-      <div style={{ display: 'flex', flexWrap: 'wrap', flex: 1 }}>
-        {apps.map(app => (
-          <a href={app.link} target="_blank" rel="noopener noreferrer" style={{ margin: 12, textAlign: 'center', maxHeight: 216, maxWidth: 216 }} key={app.name}>
-            <img src={app.icon} alt={app.name} style={{ maxHeight: 180, maxWidth: 180, borderRadius: 40 }} />
-            <div>{app.name}</div>
-          </a>
-        ))}
+      <div style={{ flex: 1 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          {apps.map(app => (
+            <a href={app.link} target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center', maxHeight: height + 20, maxWidth: width }} key={app.name}>
+              <div style={{ margin: 12 }}>
+                <img src={app.icon} alt={app.name} style={{ maxHeight: height - 24, maxWidth: width - 24, borderRadius: isMobileOnly ? 'calc(100vw / 10)' : 34 }} />
+                <div>
+                  {app.name}
+                  {/* TODO Popover explaining what verified means */}
+                  {app.verified && (
+                    <span className="badge badge-success" style={{ backgroundColor: isIOS ? '#0070c9' : '#01875f' }}>✔</span>
+                  )}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
