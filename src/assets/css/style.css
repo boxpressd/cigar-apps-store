@@ -90,15 +90,25 @@ img,
   position: relative;
   padding: .75rem 1.25rem;
   margin-bottom: 1rem;
-  border: 1px solid #bee5eb;
+  border: 1px solid #fdfdfe;
   border-radius: .25rem;
-  color: #0c5460;
-  background-color: #d1ecf1;
+  color: #818182;
+  background-color: #fefefe;
 }
 .alert-dark {
   background-color: #24262a;
   border-color: #34383d;
   color: #727885;
+}
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
 }
 button {
   -webkit-transition: all 0.3s ease-out 0s;
@@ -146,8 +156,7 @@ a:hover,
   color: #d5c196;
   text-decoration: none;
 }
-a,
-button {
+a {
   color: #d5c196;
   outline: medium none;
   text-decoration: none;
@@ -288,67 +297,6 @@ label {
   --bs-gutter-y: 30px;
 }
 
-/* button style */
-.btn {
-  user-select: none;
-  -moz-user-select: none;
-  background: #040e18;
-  border-radius: 70px;
-  border: 2px solid transparent;
-  color: #fff;
-  cursor: pointer !important;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  margin-bottom: 0;
-  padding: 25px 50px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transition: all 0.4s 0s;
-  vertical-align: middle;
-  white-space: nowrap;
-  box-shadow: 0px 6px 22px rgba(6, 34, 51, 0.22);
-  background-clip: padding-box;
-  position: relative;
-}
-.btn::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: -2px;
-  background: linear-gradient(
-    90deg,
-    #d5c196 0%,
-    rgba(4, 12, 21, 1) 49%,
-    #d5c196 100%
-  );
-  border-radius: 70px;
-  transition: all 0.4s ease 0s;
-  z-index: -1;
-}
-.btn:hover {
-  border-color: #d5c196;
-  color: #d5c196;
-}
-.btn.btn-two {
-  background: #564dca;
-  border-radius: 5px;
-  padding: 25px 42px;
-  border: none;
-}
-.btn.btn-two::after {
-  display: none;
-}
-.btn.btn-two:hover {
-  color: #fff;
-  background: #d5c196;
-}
 .breadcrumb > .active {
   color: #888;
 }
