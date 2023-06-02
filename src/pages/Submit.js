@@ -1,11 +1,14 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import {isIOS, isMobileOnly} from "mobile-device-detect";
+import reCAPTCHA from "react-google-recaptcha"
 
 const Submit = () => {
   const [successResponse, setSuccessResponse] = useState(null);
   const [errorResponse, setErrorResponse] = useState(null);
+  const captchaRef = useRef(null)
+
   return (
     <div style={!isMobileOnly ? {display: 'flex', flexDirection: 'column', height: '100vh'} : {}}>
       <Header/>
@@ -21,18 +24,21 @@ const Submit = () => {
                 const [key, value] = entry;
                 body[key] = value;
               }
+              console.log(body);
               fetch("https://formsubmit.co/ajax/6bfb286a88f5f731052cebd22fe39397", {
                 method: "POST",
                 headers: {
                   'Content-Type': 'application/json',
                   'Accept': 'application/json'
                 },
-                body,
+                body: JSON.stringify(body),
               }).then(() => {
                 setSuccessResponse('Thanks for your submission! Our team will review it and contact you shortly.');
               }).catch((err) => {
                 console.error(err);
                 setErrorResponse('Unfortunately, there was an error submitting your PWA. Please try again later or email us directly.');
+              }).finally(() => {
+                captchaRef.current.reset();
               });
             }}>
               <input type="hidden" name="_replyto" value="support@boxpressd.com" />
@@ -53,6 +59,7 @@ const Submit = () => {
                 <input required type="checkbox" className="form-check-input" id="checkbox" name="authorize" />
                 <label className="form-check-label" for="checkbox">By submitting a PWA, I acknowledge and agree that the review process is essential before the PWA is added to the database. It is understood that if the app fails to meet certain requirements, such as being installable, having a fully responsive design, treating personal information fairly, and achieving a good or perfect audit with <a rel="noopener noreferrer" target="_blank" href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">Google Lighthouse</a>, it may not be included in the database. I also agree to the terms below and those in our <a rel="noreferrer noopener" target="_blank" href="https://boxpressd.com/legal/privacy">privacy policy</a>.</label>
               </div>
+              <reCAPTCHA ref={captchaRef} sitekey="6Lc0jV0mAAAAAL5DSJ9OHXWUCTMuFZkEotSK0sQB" />
               {successResponse && <div className="alert alert-success" role="alert" style={{ margin: '12px 0' }}>{successResponse}</div>}
               {errorResponse && <div className="alert alert-error" role="alert" style={{ margin: '12px 0' }}>{errorResponse}</div>}
               <button

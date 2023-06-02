@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 
 import 'react-spring-bottom-sheet/dist/style.css'
 import {useNavigate} from "react-router-dom";
+import Tooltip from "../components/Tooltip";
 
 // TODO Pull these from Firebase or something - as of right now, it's perfectly fine as is
 const apps = [{
@@ -38,6 +39,21 @@ const apps = [{
   link: 'https://cigaro.net/pwa/',
   icon: 'https://cigar-app.com/icon.png',
   verified: false,
+}, {
+  name: 'Cigar Social',
+  link: 'https://app.cigarsocial.com/',
+  icon: 'https://app.cigarsocial.com/assets/img/logos_pwa/LOGO-01_192px.png',
+  verified: false,
+}, {
+  name: 'Cigar Public',
+  link: 'https://social.cigarpublic.com',
+  icon: 'https://cigarpublic.com/wp-content/uploads/2022/05/cp-yellow-avatar.png',
+  verified: false,
+}, {
+  name: 'Light \'em Up GO',
+  link: 'https://app.lightemupgo.com',
+  icon: 'https://app.lightemupgo.com/icons/Icon-192.png',
+  verified: false,
 }]
 
 const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
@@ -59,12 +75,24 @@ const Home = () => {
       <div style={{ flex: 1 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {apps.sort((a, b) => a.name.localeCompare(b.name)).map(app => (
-            <a href={!open ? app.link : '#'} target="_blank" rel="noopener noreferrer" style={{ textAlign: 'center', maxHeight: height + 20, maxWidth: width }} key={app.name}>
+            <a
+              key={app.name}
+              href={!open ? app.link : '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textAlign: 'center', maxHeight: height + 20, maxWidth: width }}
+              onClick={(e) => {
+                if (window.analytics) {
+                  e.preventDefault();
+                  window.analytics.track("App Clicks", { app: app.name, url: e.currentTarget.href });
+                  window.open(e.currentTarget.href, '_blank', 'noopener noreferrer');
+                }
+              }}
+            >
               <div style={{ margin: 12 }}>
-                <img src={app.icon} alt={app.name} style={{ maxHeight: height - 24, maxWidth: width - 24, borderRadius: isMobileOnly ? 'calc(100vw / 10)' : 34 }} />
+                <img src={app.icon} alt={app.name} style={{ maxHeight: height - 24, maxWidth: width - 24, borderRadius: isMobileOnly ? 'calc(100vw / 10)' : 34, backgroundColor: '#24262a' }} />
                 <div>
                   {app.name}
-                  {/* TODO Popover explaining what verified means */}
                   {app.verified && (
                     <span className="badge badge-success" style={{ backgroundColor: isIOS ? '#0070c9' : '#01875f', color: '#ffffff' }}>✔</span>
                   )}
