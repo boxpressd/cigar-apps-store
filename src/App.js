@@ -5,6 +5,8 @@ import Install from "./pages/Install";
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+import 'react-tooltip/dist/react-tooltip.css'
+
 function App() {
   const { pathname } = useLocation();
   useEffect(() => {

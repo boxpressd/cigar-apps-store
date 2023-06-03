@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import { isMobileOnly, isMobile, isIOS } from'mobile-device-detect';
 import { BottomSheet } from 'react-spring-bottom-sheet'
+import { Tooltip } from 'react-tooltip';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 import 'react-spring-bottom-sheet/dist/style.css'
 import {useNavigate} from "react-router-dom";
-import Tooltip from "../components/Tooltip";
 
 // TODO Pull these from Firebase or something - as of right now, it's perfectly fine as is
 const apps = [{
@@ -44,11 +44,11 @@ const apps = [{
   link: 'https://app.cigarsocial.com/',
   icon: 'https://app.cigarsocial.com/assets/img/logos_pwa/LOGO-01_192px.png',
   verified: false,
-}, {
-  name: 'Cigar Public',
-  link: 'https://social.cigarpublic.com',
-  icon: 'https://cigarpublic.com/wp-content/uploads/2022/05/cp-yellow-avatar.png',
-  verified: false,
+// }, {
+//   name: 'Cigar Public',
+//   link: 'https://social.cigarpublic.com',
+//   icon: 'https://cigarpublic.com/wp-content/uploads/2022/05/cp-yellow-avatar.png',
+//   verified: false,
 }, {
   name: 'Light \'em Up GO',
   link: 'https://app.lightemupgo.com',
@@ -94,13 +94,21 @@ const Home = () => {
                 <div>
                   {app.name}
                   {app.verified && (
-                    <span className="badge badge-success" style={{ backgroundColor: isIOS ? '#0070c9' : '#01875f', color: '#ffffff' }}>✔</span>
+                    <span
+                      className="badge badge-success"
+                      data-tooltip-id="verified-tooltip"
+                      data-tooltip-html="<span style='font-weight: 700'>Verified</span>&nbsp;<a target='_blank' rel='noopener noreferrer' href='https://boxpressd.freshdesk.com/support/solutions/articles/150000089694-verified-badge-for-cigar-app-on-our-cigar-apps-store'>Learn More</a>"
+                      style={{ backgroundColor: isIOS ? '#0070c9' : '#01875f', color: '#ffffff' }}
+                    >
+                      {'✔'}
+                    </span>
                   )}
                 </div>
               </div>
             </a>
           ))}
         </div>
+        <Tooltip id="verified-tooltip" clickable />
       </div>
       <Footer />
       <BottomSheet open={open} onDismiss={() => setOpen(false)}>

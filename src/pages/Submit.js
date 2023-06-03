@@ -97,8 +97,8 @@ const Submit = () => {
             <p>To ensure compatibility and optimal performance, all icons and screenshots should be directly added to
               the manifest file of your PWA. We only accept cigar-related PWAs - this excludes cigarette, vaping, and similar non-cigar apps.</p>
 
-            <p>To allow for an experience similar to popular app stores, <a rel="noreferrer noopener" target="_blank" href="https://github.com">a small script</a> can be added to your PWA. To learn
-              about the requirements and how to install the script, <a rel="noreferrer noopener" target="_blank" href="https://boxpressd.freshdesk.com">visit our help center</a>.</p>
+            <p>To allow for an experience similar to popular app stores, <a rel="noreferrer noopener" target="_blank" href="https://github.com/boxpressd/cigar-apps-store">a small script</a> can be added to your PWA. To learn
+              about the requirements and how to install the script, <a rel="noreferrer noopener" target="_blank" href="https://boxpressd.freshdesk.com/support/solutions/articles/150000089694-verified-badge-for-cigar-app-on-our-cigar-apps-store">visit our help center</a>.</p>
 
             <p>Currently, all submitted apps are manually published by our team to the public database. We handle the
               publishing process to maintain quality control and ensure that only approved apps are listed.</p>
