@@ -67,6 +67,7 @@ const Home = () => {
     if (isMobile && !isInStandaloneMode) {
       setOpen(true);
     }
+    // TODO Include search option to filter based on ?q={search_term}
   }, []);
   return (
     <div style={!isMobileOnly ? { display: 'flex', flexDirection: 'column', height: '100vh' } : {}}>
@@ -90,7 +91,7 @@ const Home = () => {
               }}
             >
               <div style={{ margin: 12 }}>
-                <img src={app.icon} alt={app.name} style={{ maxHeight: height - 24, maxWidth: width - 24, borderRadius: isMobileOnly ? 'calc(100vw / 10)' : 34, backgroundColor: '#24262a' }} />
+                <img src={`https://aouikjkrpo.cloudimg.io/v7/${app.icon}?w=180&h=180&force_format=webp`} alt={app.name} className="app-icon" />
                 <div>
                   {app.name}
                   {app.verified && (

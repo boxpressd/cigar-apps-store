@@ -12,7 +12,7 @@ const Header = () => {
             style={{ float: 'left', margin: isIOS ? '10px 16px' : '14px 16px', cursor: 'pointer' }}
             onClick={() => navigate('/')}
           >
-            <img src="/logo.png" alt="Cigar App Store" style={{ height: isIOS ? 22 : 30 }} />
+            <img src="https://aouikjkrpo.cloudimg.io/v7/https://appstore.boxpressd.com/logo.png?force_format=webp" alt="Cigar App Store" style={{ height: isIOS ? 22 : 30 }} />
           </span>
           <button
             style={isIOS ? {

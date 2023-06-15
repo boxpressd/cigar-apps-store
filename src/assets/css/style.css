@@ -1567,3 +1567,18 @@ label {
 .footer-bottom-menu ul li a:hover {
   color: #d5c196;
 }
+
+img.app-icon {
+  background-color: #24262a;
+  border-radius: 34px;
+  max-height: calc(180px - 24px);
+  max-width: calc(180px - 24px);
+}
+
+@media (max-width: 767px) {
+  img.app-icon {
+    border-radius: calc(100vw / 10);
+    max-height: calc(50vw - 24px);
+    max-width: calc(50vw - 24px);
+  }
+}
