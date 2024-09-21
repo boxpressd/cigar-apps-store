@@ -10,50 +10,82 @@ import {useNavigate} from "react-router-dom";
 
 // TODO Pull these from Firebase or something - as of right now, it's perfectly fine as is
 const apps = [{
-  name: 'Boxpressd',
-  link: 'https://bxpr.sd/install',
-  icon: 'https://app.boxpressd.com/apple-touch-icon-180x180.png',
+  name: 'Boxpressd Shop',
+  link: 'https://shop.boxpressd.com/install',
+  icon: 'https://shop.boxpressd.com/icons/256.png',
   verified: true,
+  price: 0,
+}, {
+  name: 'Boxpressd Social',
+  link: 'https://bxpr.sd/install',
+  icon: 'https://beta.boxpressd.com/icons/256.png',
+  verified: true,
+  price: 0,
 }, {
   name: 'Cigar Dojo',
   link: 'https://dojoverse.com',
   icon: 'https://dojoverse.com//wp-content//uploads//2020//06//Dojo-icon-2020-192x192-2.png',
   verified: false,
+  price: 0,
+}, {
+  name: 'Cigar Journal',
+  link: 'https://journal.boxpressd.com/install',
+  icon: 'https://journal.boxpressd.com/assets/images/logos/180.png',
+  verified: true,
+  price: 4.99,
 }, {
   name: 'Cigar Register',
   link: 'https://www.cigar-register.com',
   icon: 'https://www.cigar-register.com/android-chrome-192x192.png',
   verified: false,
+  price: 0,
 }, {
   name: 'Cigar Scanner',
   link: 'https://www.cigarscanner.com',
   icon: 'https://www.cigarscanner.com/assets/icons/icon-192x192.png',
   verified: false,
+  price: 0,
 }, {
   name: 'Cigar World',
   link: 'https://www.cigarworld.com/',
   icon: 'https://www.cigarworld.com/maskable_icon_x192.png',
   verified: false,
+  price: 0,
 }, {
   name: 'Cigaro',
   link: 'https://cigaro.net/pwa/',
   icon: 'https://cigar-app.com/icon.png',
   verified: false,
+  price: 0,
 }, {
   name: 'Cigar Social',
   link: 'https://app.cigarsocial.com/',
   icon: 'https://app.cigarsocial.com/assets/img/logos_pwa/LOGO-01_192px.png',
   verified: false,
+  price: 0,
 // }, {
 //   name: 'Cigar Public',
 //   link: 'https://social.cigarpublic.com',
 //   icon: 'https://cigarpublic.com/wp-content/uploads/2022/05/cp-yellow-avatar.png',
 //   verified: false,
 }, {
+  name: 'Cigars Near Me',
+  link: 'https://cigarsnearme.com/install',
+  icon: 'https://cdn.cigarsnearme.com/assets/logos/launcher/ic_launcher_192.png',
+  verified: true,
+  price: 0,
+}, {
   name: 'Light \'em Up GO',
   link: 'https://app.lightemupgo.com',
   icon: 'https://app.lightemupgo.com/icons/Icon-192.png',
   verified: false,
+  price: 0,
+// }, {
+//   name: 'Virtual Lounge',
+//   link: 'https://lounge.boxpressd.com',
+//   icon: 'https://lounge.boxpressd.com/assets/icon/apple-touch-icon-180x180.png',
+//   verified: false,
+//   price: 0,
 }]
 
 const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
@@ -81,7 +113,7 @@ const Home = () => {
               href={!open ? app.link : '#'}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ textAlign: 'center', maxHeight: height + 20, maxWidth: width }}
+              style={{ textAlign: 'center', maxHeight: height + 60, maxWidth: width }}
               onClick={(e) => {
                 if (window.analytics) {
                   e.preventDefault();
@@ -92,7 +124,7 @@ const Home = () => {
             >
               <div style={{ margin: 12 }}>
                 <img src={`https://aouikjkrpo.cloudimg.io/v7/${app.icon}?w=180&h=180&force_format=webp`} alt={app.name} className="app-icon" />
-                <div>
+                <div style={{ color: '#dfdfdf' }}>
                   {app.name}
                   {app.verified && (
                     <span
@@ -104,6 +136,9 @@ const Home = () => {
                       {'✔'}
                     </span>
                   )}
+                </div>
+                <div style={{ color: '#727885' }}>
+                  {app.rating || 'Not Rated'} ★ {app.price ? `$${app.price.toFixed(2)}` : ''}
                 </div>
               </div>
             </a>
