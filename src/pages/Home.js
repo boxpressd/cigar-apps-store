@@ -10,6 +10,12 @@ import {useNavigate} from "react-router-dom";
 
 // TODO Pull these from Firebase or something - as of right now, it's perfectly fine as is
 const apps = [{
+  name: 'Aficionado',
+  link: 'https://aficionado.boxpressd.com/install',
+  icon: 'https://aficionado.boxpressd.com/assets/images/logos/180.png',
+  verified: true,
+  price: 4.99,
+}, {
   name: 'Boxpressd Shop',
   link: 'https://shop.boxpressd.com/install',
   icon: 'https://shop.boxpressd.com/icons/256.png',
@@ -27,12 +33,6 @@ const apps = [{
   icon: 'https://dojoverse.com//wp-content//uploads//2020//06//Dojo-icon-2020-192x192-2.png',
   verified: false,
   price: 0,
-}, {
-  name: 'Cigar Journal',
-  link: 'https://journal.boxpressd.com/install',
-  icon: 'https://journal.boxpressd.com/assets/images/logos/180.png',
-  verified: true,
-  price: 4.99,
 }, {
   name: 'Cigar Register',
   link: 'https://www.cigar-register.com',
