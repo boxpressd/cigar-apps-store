@@ -1,6 +1,6 @@
 {
   "name": "boxpressd-app-store",
-  "version": "0.8.16",
+  "version": "0.8.17",
   "private": true,
   "dependencies": {
     "mobile-device-detect": "^0.4.3",

@@ -34,6 +34,12 @@ const apps = [{
   verified: false,
   price: 0,
 }, {
+  name: 'Cigar Mancave',
+  link: 'https://cigarmancave.com/app/feeds',
+  icon: 'https://cigarmancave.com/icons/icon-512x512.png',
+  verified: false,
+  price: 0,
+}, {
   name: 'Cigar Register',
   link: 'https://www.cigar-register.com',
   icon: 'https://www.cigar-register.com/android-chrome-192x192.png',
