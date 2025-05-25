@@ -1,30 +1,34 @@
 import React, {useEffect, useState} from 'react';
 import { isMobileOnly, isMobile, isIOS } from'mobile-device-detect';
-import { BottomSheet } from 'react-spring-bottom-sheet'
 import { Tooltip } from 'react-tooltip';
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
-import 'react-spring-bottom-sheet/dist/style.css'
-import {useNavigate} from "react-router-dom";
+const BottomSheet = dynamic(
+  () => import('react-spring-bottom-sheet').then(mod => mod.BottomSheet),
+  { ssr: false }
+);
 
 // TODO Pull these from Firebase or something - as of right now, it's perfectly fine as is
 const apps = [{
   name: 'Aficionado',
   link: 'https://aficionado.boxpressd.com/install',
-  icon: 'https://aficionado.boxpressd.com/assets/images/logos/180.png',
+  icon: require('../assets/img/aficionado-192.webp'),
   verified: true,
   price: 4.99,
 }, {
   name: 'Boxpressd Shop',
   link: 'https://shop.boxpressd.com/install',
-  icon: 'https://shop.boxpressd.com/icons/256.png',
+  icon: require('../assets/img/shop-180.png'),
   verified: true,
   price: 0,
 }, {
   name: 'Boxpressd Social',
   link: 'https://bxpr.sd/install',
-  icon: 'https://beta.boxpressd.com/icons/256.png',
+  icon: require('../assets/img/social-180.png'),
   verified: true,
   price: 0,
 }, {
@@ -33,12 +37,12 @@ const apps = [{
   icon: 'https://dojoverse.com//wp-content//uploads//2020//06//Dojo-icon-2020-192x192-2.png',
   verified: false,
   price: 0,
-}, {
-  name: 'Cigar Mancave',
-  link: 'https://cigarmancave.com/app/feeds',
-  icon: 'https://cigarmancave.com/icons/icon-512x512.png',
-  verified: false,
-  price: 0,
+// }, {
+//   name: 'Cigar Mancave',
+//   link: 'https://cigarmancave.com/app/feeds',
+//   icon: 'https://cigarmancave.com/icons/icon-512x512.png',
+//   verified: false,
+//   price: 0,
 }, {
   name: 'Cigar Register',
   link: 'https://www.cigar-register.com',
@@ -94,10 +98,10 @@ const apps = [{
 //   price: 0,
 }]
 
-const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+const isInStandaloneMode = typeof window !== "undefined" && (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true);
 
-const Home = () => {
-  const navigate = useNavigate();
+const Index = () => {
+  // const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const height = isMobileOnly ? '50vw' : 180;
   const width = isMobileOnly ? '50vw' : 180;
@@ -129,7 +133,7 @@ const Home = () => {
               }}
             >
               <div style={{ margin: 12 }}>
-                <img src={`https://aouikjkrpo.cloudimg.io/v7/${app.icon}?w=180&h=180&force_format=webp`} alt={app.name} className="app-icon" />
+                <Image src={app.icon} height={180} width={180} alt={app.name} className="app-icon" />
                 <div style={{ color: '#dfdfdf' }}>
                   {app.name}
                   {app.verified && (
@@ -156,9 +160,10 @@ const Home = () => {
       <BottomSheet open={open} onDismiss={() => setOpen(false)}>
         <div style={{ padding: 16 }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid #dfdfdf', paddingBottom: 10 }}>
-            <img src="/apple-touch-icon-180.png" style={{ width: 20, height: 20, borderRadius: 10, marginRight: 10 }} />
+            <Image src="/apple-touch-icon-180.png" height={20} width={20} style={{ borderRadius: 10, marginRight: 10 }} />
             <span style={{ flex: 1, color: '#2b2b2b' }}>Cigar Apps Store</span>
-            <button
+            <Link
+              href="/install"
               type="submit"
               style={isIOS ? {
                 border: 'none',
@@ -180,10 +185,10 @@ const Home = () => {
                 borderRadius: '8px',
                 cursor: 'pointer',
               }}
-              onClick={() => navigate('/install')}
+              // onClick={() => navigate('/install')}
             >
               {'Install'}
-            </button>
+            </Link>
           </div>
           <p>Install Cigar Apps Store to your phone to always have quick access to the latest cigar apps on the market.</p>
         </div>
@@ -192,4 +197,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Index;

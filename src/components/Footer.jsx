@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { isMobile } from 'mobile-device-detect';
 
 const Footer = () => {
@@ -24,13 +24,28 @@ const Footer = () => {
                 <div className="footer-menu">
                   <ul>
                     <li>
-                      <Link to="#" onClick={() => window.open('https://boxpressd.com/legal/terms', '_blank')}>Terms & Conditions</Link>
+                      <a
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open('https://boxpressd.com/legal/terms', '_blank')
+                        }}
+                      >
+                        {'Terms & Conditions'}
+                      </a>
                     </li>
                     <li>
-                      <Link to="#" onClick={() => window.open('https://boxpressd.com/legal/privacy', '_blank')}>Privacy Policy</Link>
+                      <a
+                        href="#" onClick={(e) => {
+                          e.preventDefault();
+                          window.open('https://boxpressd.com/legal/privacy', '_blank')
+                        }}
+                      >
+                        {'Privacy Policy'}
+                      </a>
                     </li>
                     <li>
-                      <Link to="/submit">Submit App</Link>
+                      <Link href="/submit">Submit App</Link>
                     </li>
                   </ul>
                 </div>
