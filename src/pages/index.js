@@ -179,7 +179,7 @@ const Index = () => {
                 color: '#fff',
                 fontFamily: 'Google Sans,Roboto,Arial,sans-serif',
                 fontWeight: 700,
-                height: 36,
+                height: 25,
                 padding: '8px 16px',
                 border: 'none',
                 borderRadius: '8px',
