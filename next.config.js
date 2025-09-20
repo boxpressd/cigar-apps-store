@@ -17,6 +17,7 @@ module.exports = {
       'cigaro.net',
       'social.cigarpublic.com',
       'cigar-app.com',
+      'leafenthusiasts.com',
     ],
   },
 }

@@ -85,6 +85,12 @@ const apps = [{
   verified: true,
   price: 0,
 }, {
+  name: 'Leaf Enthusiasts',
+  link: 'https://leafenthusiasts.com',
+  icon: 'https://leafenthusiasts.com/manifest-icon-512.maskable.png',
+  verified: false,
+  price: 0,
+}, {
   name: 'Light \'em Up GO',
   link: 'https://app.lightemupgo.com',
   icon: 'https://app.lightemupgo.com/icons/Icon-192.png',
