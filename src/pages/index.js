@@ -34,7 +34,7 @@ const apps = [{
 }, {
   name: 'Cigar Dojo',
   link: 'https://dojoverse.com',
-  icon: 'https://dojoverse.com//wp-content//uploads//2020//06//Dojo-icon-2020-192x192-2.png',
+  icon: 'https://dojoverse.com/wp-content/uploads/2020/06/Dojo-icon-2020-192x192-2.png',
   verified: false,
   price: 0,
 // }, {
@@ -67,12 +67,12 @@ const apps = [{
   icon: 'https://cigar-app.com/icon.png',
   verified: false,
   price: 0,
-}, {
-  name: 'Cigar Social',
-  link: 'https://app.cigarsocial.com/',
-  icon: 'https://app.cigarsocial.com/assets/img/logos_pwa/LOGO-01_192px.png',
-  verified: false,
-  price: 0,
+// }, {
+//   name: 'Cigar Social',
+//   link: 'https://app.cigarsocial.com/',
+//   icon: 'https://app.cigarsocial.com/assets/img/logos_pwa/LOGO-01_192px.png',
+//   verified: false,
+//   price: 0,
 // }, {
 //   name: 'Cigar Public',
 //   link: 'https://social.cigarpublic.com',
@@ -90,12 +90,12 @@ const apps = [{
   icon: 'https://leafenthusiasts.com/manifest-icon-512.maskable.png',
   verified: false,
   price: 0,
-}, {
-  name: 'Light \'em Up GO',
-  link: 'https://app.lightemupgo.com',
-  icon: 'https://app.lightemupgo.com/icons/Icon-192.png',
-  verified: false,
-  price: 0,
+// }, {
+//   name: 'Light \'em Up GO',
+//   link: 'https://app.lightemupgo.com',
+//   icon: 'https://app.lightemupgo.com/icons/Icon-192.png',
+//   verified: false,
+//   price: 0,
 // }, {
 //   name: 'Virtual Lounge',
 //   link: 'https://lounge.boxpressd.com',
