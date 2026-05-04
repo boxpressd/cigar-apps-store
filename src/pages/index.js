@@ -102,6 +102,18 @@ const apps = [{
 //   icon: 'https://lounge.boxpressd.com/assets/icon/apple-touch-icon-180x180.png',
 //   verified: false,
 //   price: 0,
+// }, {
+//   name: 'Vitola',
+//   link: 'https://app.getvitolaapp.com',
+//   icon: 'https://app.getvitolaapp.com/icons/Icon-512.png',
+//   verified: false,
+//   price: 0,
+}, {
+  name: 'Vitola',
+  link: 'https://officialvitola.com',
+  icon: 'https://officialvitola.com/vitola_app_icon_1024_enlarged.png',
+  verified: false,
+  price: 0,
 }]
 
 const isInStandaloneMode = typeof window !== "undefined" && (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true);

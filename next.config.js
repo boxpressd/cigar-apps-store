@@ -70,6 +70,14 @@ module.exports = {
         protocol: 'https',
         hostname: 'leafenthusiasts.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'app.getvitolaapp.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'officialvitola.com',
+      },
     ],
   },
 }
