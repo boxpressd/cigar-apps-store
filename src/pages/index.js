@@ -109,7 +109,7 @@ const apps = [{
 //   verified: false,
 //   price: 0,
 }, {
-  name: 'Vitola',
+  name: 'Vitolá',
   link: 'https://officialvitola.com',
   icon: 'https://officialvitola.com/vitola_app_icon_1024_enlarged.png',
   verified: false,
