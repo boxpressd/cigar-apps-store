@@ -44,6 +44,12 @@ const apps = [{
 //   verified: false,
 //   price: 0,
 }, {
+  name: 'Cigar Pilot',
+  link: 'https://app.cigarpilot.com',
+  icon: 'https://app.cigarpilot.com/assets/icons/icon-512x512.png',
+  verified: false,
+  price: 0,
+}, {
   name: 'Cigar Register',
   link: 'https://www.cigar-register.com',
   icon: 'https://www.cigar-register.com/android-chrome-192x192.png',
@@ -108,12 +114,12 @@ const apps = [{
 //   icon: 'https://lounge.boxpressd.com/assets/icon/apple-touch-icon-180x180.png',
 //   verified: false,
 //   price: 0,
-// }, {
-//   name: 'Vitola',
-//   link: 'https://app.getvitolaapp.com',
-//   icon: 'https://app.getvitolaapp.com/icons/Icon-512.png',
-//   verified: false,
-//   price: 0,
+}, {
+  name: 'Vitola',
+  link: 'https://app.getvitolaapp.com',
+  icon: 'https://app.getvitolaapp.com/icons/Icon-512.png',
+  verified: false,
+  price: 0,
 }, {
   name: 'Vitolá',
   link: 'https://officialvitola.com',
