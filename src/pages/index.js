@@ -67,6 +67,12 @@ const apps = [{
   icon: 'https://cigar-app.com/icon.png',
   verified: false,
   price: 0,
+}, {
+  name: 'Cigarro',
+  link: 'https://app.cigarroapp.com',
+  icon: 'https://app.cigarroapp.com/icon-512.png',
+  verified: false,
+  price: 0,
 // }, {
 //   name: 'Cigar Social',
 //   link: 'https://app.cigarsocial.com/',

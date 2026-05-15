@@ -60,6 +60,10 @@ module.exports = {
       },
       {
         protocol: 'https',
+        hostname: 'app.cigarroapp.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'social.cigarpublic.com',
       },
       {
