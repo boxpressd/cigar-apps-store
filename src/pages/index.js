@@ -156,7 +156,7 @@ const Index = () => {
           {apps.sort((a, b) => a.name.localeCompare(b.name)).map(app => (
             <a
               key={app.name}
-              href={!open ? app.link : '#'}
+              href={!open ? `${app.link}?utm_source=boxpressd&utm_medium=pwa_directory&utm_campaign=app_store_listing` : '#'}
               target="_blank"
               rel="noopener noreferrer"
               style={{ textAlign: 'center', maxHeight: height + 60, maxWidth: width }}
