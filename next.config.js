@@ -86,6 +86,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'officialvitola.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'app.gethumi.co',
+      },
     ],
   },
 }
