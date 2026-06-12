@@ -14,21 +14,21 @@ const BottomSheet = dynamic(
 
 // TODO Pull these from Firebase or something - as of right now, it's perfectly fine as is
 const apps = [{
-  name: 'Aficionado',
-  link: 'https://aficionado.boxpressd.com/install',
+  name: 'Boxpressd',
+  link: 'https://bxpr.sd/install',
+  icon: require('../assets/img/social-180.png'),
+  verified: true,
+  price: 0,
+}, {
+  name: 'Boxpressd Limitada',
+  link: 'https://limitada.boxpressd.com/install',
   icon: require('../assets/img/aficionado-192.webp'),
   verified: true,
-  price: 4.99,
+  price: 9.99,
 }, {
   name: 'Boxpressd Shop',
   link: 'https://shop.boxpressd.com/install',
   icon: require('../assets/img/shop-180.png'),
-  verified: true,
-  price: 0,
-}, {
-  name: 'Boxpressd Social',
-  link: 'https://bxpr.sd/install',
-  icon: require('../assets/img/social-180.png'),
   verified: true,
   price: 0,
 }, {
