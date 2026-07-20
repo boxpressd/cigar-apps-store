@@ -24,23 +24,12 @@ const Footer = () => {
                 <div className="footer-menu">
                   <ul>
                     <li>
-                      <a
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault();
-                          window.open('https://boxpressd.com/legal/terms', '_blank')
-                        }}
-                      >
+                      <a href="https://boxpressd.com/legal/terms" target="_blank">
                         {'Terms & Conditions'}
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="#" onClick={(e) => {
-                          e.preventDefault();
-                          window.open('https://boxpressd.com/legal/privacy', '_blank')
-                        }}
-                      >
+                      <a href="https://boxpressd.com/legal/privacy" target="_blank">
                         {'Privacy Policy'}
                       </a>
                     </li>
