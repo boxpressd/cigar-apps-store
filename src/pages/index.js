@@ -32,7 +32,7 @@ const apps = [{
   verified: true,
   price: 0,
 }, {
-  name: 'Cigar Amigos',
+  name: 'Cigars Amigos',
   link: 'https://cigarsamigos.com/',
   icon: 'https://cigarsamigos.b-cdn.net/_app_assets/icons-mono/icon_512x512.png',
   verified: false,
