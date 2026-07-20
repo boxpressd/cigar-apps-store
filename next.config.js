@@ -52,7 +52,7 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: 'cigarsamigos.com',
+        hostname: 'cigarsamigos.b-cdn.net',
       },
       {
         protocol: 'https',
