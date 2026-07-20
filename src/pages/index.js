@@ -32,6 +32,12 @@ const apps = [{
   verified: true,
   price: 0,
 }, {
+  name: 'Cigar Amigos',
+  link: 'https://cigarsamigos.com/',
+  icon: 'https://cigarsamigos.b-cdn.net/_app_assets/icons-mono/icon_512x512.png',
+  verified: false,
+  price: 0,
+}, {
   name: 'Cigar Dojo',
   link: 'https://dojoverse.com',
   icon: 'https://dojoverse.com/wp-content/uploads/2020/06/Dojo-icon-2020-192x192-2.png',

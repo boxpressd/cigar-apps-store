@@ -52,6 +52,10 @@ module.exports = {
       },
       {
         protocol: 'https',
+        hostname: 'cigarsamigos.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'dojoverse.com',
       },
       {
