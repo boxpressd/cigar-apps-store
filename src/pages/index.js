@@ -102,12 +102,12 @@ const apps = [{
   icon: 'https://cdn.cigarsnearme.com/assets/logos/launcher/ic_launcher_192.png',
   verified: true,
   price: 0,
-}, {
-  name: 'Humi',
-  link: 'https://app.gethumi.co/',
-  icon: 'https://app.gethumi.co/icon-192.png',
-  verified: false,
-  price: 0,
+// }, {
+//   name: 'Humi',
+//   link: 'https://app.gethumi.co/',
+//   icon: 'https://app.gethumi.co/icon-192.png',
+//   verified: false,
+//   price: 0,
 }, {
   name: 'Leaf Enthusiasts',
   link: 'https://leafenthusiasts.com',
