@@ -94,6 +94,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'app.gethumi.co',
       },
+      {
+        protocol: 'https',
+        hostname: 'theleafcellar.com',
+      },
     ],
   },
 }

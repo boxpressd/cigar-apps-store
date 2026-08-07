@@ -138,6 +138,12 @@ const apps = [{
   icon: 'https://officialvitola.com/vitola_app_icon_1024_enlarged.png',
   verified: false,
   price: 0,
+}, {
+  name: 'The Leaf Cellar',
+  link: 'https://theleafcellar.com',
+  icon: 'https://theleafcellar.com/icons/icon-512.png',
+  verified: false,
+  price: 0,
 }]
 
 const isInStandaloneMode = typeof window !== "undefined" && (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true);
