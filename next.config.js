@@ -80,6 +80,10 @@ module.exports = {
       },
       {
         protocol: 'https',
+        hostname: 'app.cigarista.app',
+      },
+      {
+        protocol: 'https',
         hostname: 'leafenthusiasts.com',
       },
       {

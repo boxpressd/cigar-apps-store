@@ -97,6 +97,11 @@ const apps = [{
 //   icon: 'https://cigarpublic.com/wp-content/uploads/2022/05/cp-yellow-avatar.png',
 //   verified: false,
 }, {
+  name: 'Cigarista',
+  link: 'https://app.cigarista.app',
+  icon: 'https://app.cigarista.app/icons/icon-512.png',
+  verified: false,
+}, {
   name: 'Cigars Near Me',
   link: 'https://cigarsnearme.com/install',
   icon: 'https://cdn.cigarsnearme.com/assets/logos/launcher/ic_launcher_192.png',
