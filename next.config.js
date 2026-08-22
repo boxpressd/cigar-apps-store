@@ -84,6 +84,14 @@ module.exports = {
       },
       {
         protocol: 'https',
+        hostname: 'oouxkyuexvzylckxeeks.supabase.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'app.vitola.ai',
+      },
+      {
+        protocol: 'https',
         hostname: 'leafenthusiasts.com',
       },
       {

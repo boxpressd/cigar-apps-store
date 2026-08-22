@@ -138,6 +138,18 @@ const apps = [{
   verified: false,
   price: 0,
 }, {
+  name: 'Vitola',
+  link: 'https://app.vitola.ai/',
+  icon: 'https://app.vitola.ai/pwa-assets/vitola-icon-512.png',
+  verified: false,
+  price: 0,
+}, {
+  name: 'Vitola',
+  link: 'https://vitola.online',
+  icon: 'https://oouxkyuexvzylckxeeks.supabase.co/storage/v1/object/public/pgsstoragebucket/4j5kPXZFWuDnz7esMCCt/mGhonReNqPozhCM.png',
+  verified: false,
+  price: 0,
+}, {
   name: 'Vitolá',
   link: 'https://officialvitola.com',
   icon: 'https://officialvitola.com/vitola_app_icon_1024_enlarged.png',
